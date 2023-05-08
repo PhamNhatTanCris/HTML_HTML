@@ -1,0 +1,23 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+#Bai1{
+    text-align: center;
+}
+
+.img2{
+    width: 480px;
+}
+
+hr{
+    width: 960px;
+}
+
+i{
+    font-style: italic;
+}
+
+strong{
+    font-weight: bold;
+}
