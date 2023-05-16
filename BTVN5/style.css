@@ -17,9 +17,9 @@ a {
     text-decoration: none;
 }
 
-.list-menu {
+/* .list-menu {
     
-} 
+}  */
 
 .list-menu ul {
     display: flex;
@@ -36,7 +36,7 @@ a {
 .list-menu ul li a{
     padding: 6px 12px;
     margin: 12px 12px 12px 0px;
-    background-color: rgb(240, 238, 237);
+    background-color: rgb(228, 224, 223);
     border-radius: 7px;
     color: black;
     
@@ -72,10 +72,11 @@ a {
 }
 .content-items p {
     overflow: hidden;
-    margin: 10px 20px 10px 8px
+    margin: 10px 20px 10px 8px;
+    color: black;
 }
 
-.content-items > img {
+.content-items > a > img {
     border-radius: 9px;
     
 }
@@ -90,4 +91,9 @@ a {
 
 .content-video {
     display: flex;
+}
+
+.content-video a {
+    font-weight: bold;
+    color: black;
 }
