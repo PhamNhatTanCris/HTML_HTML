@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: "Roboto","Arial",sans-serif;
+}
 
 .container {
     display: flex;
@@ -81,11 +84,13 @@ a {
     position: absolute;
     left: 72px;
     top: 70px;
-    width: 350px;
+    width: 400px;
 }
 
 .banner-content p{
     font-size: 16px;
+    line-height: 1.5;
+    font-weight: bold;
 }
 
 .banner-btn {
@@ -130,9 +135,16 @@ a {
     flex-wrap: wrap;
 }
 .content-items > .content-video > p {
-    overflow: hidden;
     margin: 10px 20px 3px 8px;
     color: black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+    
+    
 }
 
 .content-items > a > img {
@@ -169,7 +181,7 @@ a {
 
 .view-time {
     display: flex;
-    margin-left: 36px;
+    margin-left: 38px;
 }
 
 .view-time p {
