@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>chọn ngày tháng năm sinh</h2>
+    <!-- <select name="ngay" id="ngay">
+        <option value="0">ngày 1</option>
+    </select>
+    <select name="thang" id="thang">
+        <option value="">tháng 1</option>
+        
+    </select> -->
+    <select name="nam" id="nam">
+        <option value="">năm 2019</option>
+    </select>
+    <select name="thang" id="thang">
+        <option value="">tháng 1</option>
+        
+    </select>
+    <select name="ngay" id="ngay">
+        <option value="0">ngày 1</option>
+    </select>
+
+    <script>
+        var optionYear = " ";
+        for(var y = 1900; y <= 2023; y++){
+            optionYear = optionYear + "<option value = '"+y+"'>" + "năm " + y + "</option>";
+        }
+
+        document.getElementById("nam").innerHTML = optionYear;
+        var optionMonth = " ";
+        for(var m = 1; m <= 12; m++){
+            optionMonth = optionMonth + "<option value = '"+m+"'>" + "tháng " + m + "</option>";
+            if(m == 2){
+                var optionDay = " ";
+                for(var d = 1; d <= 29; d++){
+                    optionDay = optionDay + "<option value = '"+d+"'>" + "ngày " + d + "</option>";
+            }
+
+            document.getElementById("ngay").innerHTML = optionDay;
+        }
+        }
+
+        document.getElementById("thang").innerHTML = optionMonth;
+
+        // var optionDay = " ";
+        // for(var d = 1; d <= 31; d++){
+        //     optionDay = optionDay + "<option value = '"+d+"'>" + "ngày " + d + "</option>";
+        // }
+
+        // document.getElementById("ngay").innerHTML = optionDay;
+    </script>
+</body>
+</html>

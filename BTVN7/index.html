@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead td{
+            font-weight: bold;
+        }
+
+        td {
+            border: 1px solid rgb(175, 164, 164);
+            padding: 10px;
+        }
+
+        .container div{
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container-table">
+        <table id="table-item" border="1px">
+            <thead>
+                <tr>
+                    <td>cột 1</td>
+                    <td>cột 2</td>
+                    <td>cột 3</td>
+                    <td>cột 4</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>hàng 1 cột 1</td>
+                    <td>hàng 1 cột 2</td>
+                    <td>hàng 1 cột 3</td>
+                    <td>hàng 1 cột 4</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>Chương trình tạo bảng</h2>
+    <div class="container">
+        <div>
+            <label for="">Số cột</label>
+            <input type="number" name="col" id="col" value="0">
+        </div>
+
+        <div>
+            <label for="">Số hàng</label>
+            <input type="number" name="row" id="row" value="0">
+        </div>
+        <div>
+            <button onclick="
+                var col = document.getElementById('col').value;
+                var row = document.getElementById('row').value;
+                CreateTable(row, col);">
+                Tạo bảng tự động     
+            </button>
+        </div>
+
+    </div> -->
+    <!-- <form action="">
+        Số dòng: <input type="text" id="row">
+        <br>
+        Số cột: <input type="text" id="column">
+        <br>
+        <input type="button" value="Tạo table" onclick="return createTable()">
+        <button onclick="return createTable()">Tạo bảng</button>
+    </form> -->
+      
+    <div class="container-form">
+        <div>
+            <label for="">Số cột</label>
+            <input type="number" name="col" id="column" value="0">
+        </div>
+
+        <div>
+            <label for="">Số hàng</label>
+            <input type="number" name="row" id="row" value="0">
+        </div>
+        <div>
+            <button onclick="createTable()">Tạo bảng tự động</button>
+        </div>
+
+    </div>   
+    <div id="container">
+      
+    </div>
+    <script>
+        function createTable() {
+            var row = document.getElementById("row");
+            var column = document.getElementById("column");
+
+		    var container = document.getElementById("container");
+	
+		    var countRow = parseInt(row.value);
+		    var countColumn = parseInt(column.value);
+	
+		    var tagTable = document.createElement("table");
+	
+		    for (var i = 1; i <= countRow; i++) {
+                var tagRow = document.createElement("tr");
+                tagTable.appendChild(tagRow);
+	  		
+                for(var j = 1; j <= countColumn; j++) {
+                    var tagColumn = document.createElement("td");
+				    var textNode = document.createTextNode("hàng "+i + " cột " + j);
+				    tagColumn.appendChild(textNode);
+				    tagRow.appendChild(tagColumn);
+                }
+		    }
+	        container.appendChild(tagTable);
+	
+		    return true;
+        }  
+    </script>
+</body>
+</html>

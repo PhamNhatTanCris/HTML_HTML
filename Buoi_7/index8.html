@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>chon ngay sinh nhat</h2>
+    <select name="" id="nam">
+        <option value="1900">năm 1900</option>
+        <option value="1900">năm 1901</option>
+        <option value="1900">năm 1902</option>
+        <option value="1900">năm 1903</option>
+        <option value="1900">năm 2023</option>
+    </select>
+    <select name="" id="thang">
+        <option value="1">tháng 1</option>
+        <option value="1">tháng 2</option>
+        <option value="1">tháng 3</option>
+        <option value="1">tháng 4</option>
+        <option value="1">tháng 12</option>
+    </select>
+    <select name="" id="ngay">
+        <option value="1">ngày 1</option>
+        <option value="1">ngày 2</option>
+        <option value="1">ngày 3</option>
+        <option value="1">ngày 4</option>
+        <option value="1">ngày 31</option>
+    </select>
+
+
+    <!-- java script -->
+
+    <script>
+        var NAM = ' ';
+        for(var y = 1900; y <= 2023; y++){
+            NAM = NAM + ("<option value='"+y+"'>"+ "năm " +y+"</option>");
+        }
+        document.getElementById('nam').innerHTML = NAM;
+
+        var THANG = ' ';
+        for(var m = 1; m <= 12; m++){
+            THANG = THANG + ("<option value='"+m+"'>"+ "tháng " +m+"</option>");
+
+            if(m == 2){
+                var Month = 28;
+            }
+            else{
+                var Month = 30;
+            }
+        }
+        document.getElementById('thang').innerHTML = THANG;
+
+        var NGAY = ' ';
+        for(var d = 1; d <= Month; d++){
+            NGAY = NGAY + ("<option value='"+d+"'>"+ "Ngày " +d+"</option>");
+        }
+        document.getElementById('ngay').innerHTML = NGAY;
+
+    </script>
+    
+</body>
+</html>

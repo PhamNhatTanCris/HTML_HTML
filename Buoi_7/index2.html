@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container > div {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Ung dung BMI</h3>
+        <div>
+            <label for="">Chiều cao</label>
+            <input type="text" name="height" id="height" value="0">
+        </div>
+        <div>
+            <label for="">Cân nặng</label>
+            <input type="text" name="weight" id="weight" value="0">
+        </div>
+        <div>
+            <button id="calc" onclick="var height = document.getElementById('height').value; 
+            var weight = document.getElementById('weight').value; 
+            var ot = bmiCalculator(height, weight)
+            alert(ot)">Tính chỉ số BMI</button>
+        </div>
+        <!-- <div>
+            <label for="">Kết quả</label>
+            <input type="text" name="ketqua" id="ketqua" value="" readonly>
+        </div>
+        <div>
+            <label for="">Phân loại</label>
+            <input type="text" name="phanloai" id="phanloai" value="" readonly>
+        </div> -->
+    </div>
+</body>
+<script>
+    function bmiCalculator(h, w){
+        var bmi = w/(h*h);
+        console.log("Chỉ số BMI: " + bmi);
+
+        var result = " ";
+
+        if(bmi > 0 && bmi < 18.5){
+            result = "gầy";
+        }
+        else if(bmi >= 18.5 && bmi <= 24.9){
+            result = "cân đối";
+        }
+        else if(bmi >= 25 && bmi <= 29.9){
+            result = "thừa cân";
+        }
+        else if(bmi >= 30 && bmi <= 34.9){
+            result = "béo phì";
+        }
+        else{
+            result = "béo phì nguy hiểm";
+        }
+        // document.getElementById("ketqua").value = bmi; 
+        // document.getElementById("phanloai").value = result;
+        // alert("kết quả của bạn là: " + bmi + ". Phân loại: " + result);
+        console.log("phân loại: " + result);
+        var output = "kết quả của bạn là: " + bmi + ". Phân loại: " + result;
+        
+        return output;
+        
+
+
+        
+    }
+</script>
+</html>

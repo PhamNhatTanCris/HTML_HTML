@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="">A:</label>
+            <input type="number" name="a" id="a" value="">
+        </div>
+        <div>
+            <label for="">B:</label>
+            <input type="number" name="b" id="b" value="">
+        </div>
+        <div>
+            <button onclick="
+            var a = document.getElementById('a').value; 
+            var b = document.getElementById('b').value;
+            a = parseFloat(a);
+            b = parseFloat(b);
+            var c = calc(a, b, '+');
+            document.getElementById('result').innerText = 'Kết quả là: ' + c;
+            ">+</button>
+            <button onclick="
+            var a = document.getElementById('a').value; 
+            var b = document.getElementById('b').value;
+            var c = calc(a, b, '-');
+            document.getElementById('result').innerText = 'Kết quả là: ' + c;
+            ">-</button>
+            <button onclick="
+            var a = document.getElementById('a').value; 
+            var b = document.getElementById('b').value;
+            var c = calc(a, b, '*');
+            document.getElementById('result').innerText = 'Kết quả là: ' + c;
+            ">*</button>
+            <button onclick="
+            var a = document.getElementById('a').value; 
+            var b = document.getElementById('b').value;
+            var c = calc(a, b, '/');
+            document.getElementById('result').innerText = 'Kết quả là: ' + c;
+            ">/</button>
+        </div>
+        <div id="result">
+            kết quả ?
+        </div>
+    </div>
+    <script>
+        function calc(x, y, op){
+            var t = 0;
+            if(op == "+"){
+                t = x + y;
+            }
+            else if(op == "-"){
+                t = x - y;
+            }
+            else if(op == "*"){
+                t = x * y;
+            }
+            else if(op == "/"){
+                t = x / y;
+            }
+
+            return t;
+        }
+    </script>
+</body>
+</html>

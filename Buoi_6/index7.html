@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>thực hành chuỗi trong java script</pre>
+    <div id="demo1">nội dung của thẻ div</div>
+    <div id="demo2">nội dung của thẻ div</div>
+    <div class="demo3">không có gì</div>
+    <script>
+        var city = 'Hà Nội';
+        var country = 'là thủ đô của nước \'Việt Nam\'';
+        console.log(city + ' ' + country); 
+
+        document.write("<h1> xin chào lệnh document.write('')</h1>");
+        document.write("<p> đây là thẻ p trong document.write(\"\");</p>")
+        // gán chuỗi vào nội dung html
+        document.getElementById("demo1").innerText = "Hà Nội";
+        document.getElementById("demo2").innerHTML = "<a href = \"http://google.com\">google</a>";
+        document.getElementsByClassName.innerText = "Phạm Nhật Tân";
+
+    </script>
+</body>
+</html>

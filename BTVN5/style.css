@@ -30,6 +30,7 @@ a {
     /* background-color: aqua; */
     align-items: center;
     /* white-space: nowrap; */
+    
 }
 
 .list-menu ul li {
@@ -145,6 +146,10 @@ a {
     line-height: 1.5;
     
     
+}
+
+.content-items a img:hover {
+    border-radius: 0;
 }
 
 .content-items > a > img {
