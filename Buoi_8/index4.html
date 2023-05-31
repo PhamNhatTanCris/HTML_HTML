@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var student1 = {
+            name: "Phạm Nhật Tân",
+            age: 22,
+            birth: "11-11-2001",
+            address: "Nam Định",
+            scoreMath: 10,
+            eScore: 8.5,
+
+            avg_score: function(){
+                return (this.scoreMath + this.eScore)/2;
+            }
+        };
+
+        var avg = student1.avg_score();
+
+        console.log("Điểm TB: " + avg);
+
+    </script>
+
+</body>
+</html>

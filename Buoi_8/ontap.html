@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container div{
+            margin: 10px;
+        }
+
+        thead td{
+            font-weight: bold;
+        }
+
+        td{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="">Nhập số hàng</label>
+            <input type="text" name="row" id="row" value="">
+        </div>
+
+        <div>
+            <label for="">Nhập số cột</label>
+            <input type="text" name="col" id="col" value="">
+        </div>
+
+        <div>
+            <button onclick="createTable()">In ra bảng</button>
+        </div>
+    </div>
+
+    <div id="target"></div>
+
+    <script>
+        function createTable(){
+            var row = document.getElementById('row').value;
+            var col = document.getElementById('col').value;
+
+            var contentThead = ' ';
+            var contentTbody = ' ';
+
+            contentThead += "<tr>";
+            for(var i = 1; i <= col; i++){
+                contentThead += "<td>cột "+i+"</td>";
+            }
+            contentThead += "</tr>";
+
+            for(var r = 1; r <= row; r++){
+                contentTbody += "<tr>";
+                for(var c = 1; c <= col; c++){
+                    contentTbody += "<td>";
+                    contentTbody += "hàng " + r + " cột " + c ;
+                    contentTbody += "</td>";
+                }
+                contentTbody += "</tr>";
+            }
+
+            var html = `<table>
+                <thead>
+                    ${contentThead}
+                </thead>
+
+                <tbody>
+                    ${contentTbody}
+                </tbody>
+            </table>
+            `;
+
+            document.getElementById('target').innerHTML = html;
+        }
+    </script>
+</body>
+</html>

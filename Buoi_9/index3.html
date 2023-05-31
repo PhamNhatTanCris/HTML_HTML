@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        thead > tr{
+            font-weight: bold;
+        }
+        td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <pre>các loại vòng lặp</pre>
+
+    <div id="target"></div>
+
+    <script>
+        var person = {
+            name: "tân", 
+            age: 20, 
+            sex: "nam", 
+            address: "nam định", 
+            number: "0838323567"
+        };
+
+        var THEAD = ' ';
+
+        THEAD += `
+        <tr>
+            <td>STT</td> 
+            <td>Tên thuộc tính</td>  
+            <td>giá trị thuộc tính</td>        
+        <tr>
+        `;
+        
+        var NAME = ' ';
+        var i = 1;
+        for(let x in person){
+            NAME += `<tr> 
+                <td>${i}</td>
+                <td>${x}</td>
+                <td>${person[x]}</td>
+            </tr>`;
+            i++;
+        }
+
+        var Target = `
+        <table>
+            <thead>
+                ${THEAD}    
+            </thead>
+            <tbody>
+                ${NAME}
+            </tbody>
+            
+        </table>
+        `;
+
+        document.getElementById('target').innerHTML = Target;
+       
+
+        
+    </script>
+</body>
+</html>

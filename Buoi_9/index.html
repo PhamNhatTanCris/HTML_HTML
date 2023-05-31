@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>Thời gian trong js</pre>
+    <script>
+        var d1 = new Date(2024, 0, 1, 0, 0, 0);
+        var d2 = new Date();
+
+        document.write('<br>' + d1.getTime());
+        document.write('<br>' + d2.getTime());
+
+        var d3 = d1 - d2;
+
+        document.write("<br> khoảng thời gian: "+ d3);
+        var month = parseInt(d3 / (60 * 60 * 24 * 30 * 1000));
+
+        var day = parseInt((d3 - ((60 * 60 * 24 * 30 * 1000) * month)) / (60 * 60 * 24 * 1000));
+
+        var hour = parseInt((d3 - (((60 * 60 * 24 * 30 * 1000) * month) + ((60 * 60 * 24 * 1000) * day))) / (60 * 60 * 1000))
+
+        var minute = parseInt(((d3 - (((60 * 60 * 24 * 30 * 1000) * month) + ((60 * 60 * 24 * 1000) * day)) + ((60 * 60 * 1000) * hour))) / (60 * 1000));
+
+        var second = 
+        document.write('<br>' + month + ' tháng');
+        document.write('<br>' + day + ' ngày');
+        document.write('<br>' + hour + ' giờ');
+        document.write('<br>' + minute + ' phút');
+        document.write('<br>' + second + ' giây');
+        
+    </script>
+</body>
+</html>

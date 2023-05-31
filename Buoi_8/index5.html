@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        var Combo = ["tân", "thương", "thư", "thu", "thủy", "thành", "thoại", "thắm", "thịnh", "thảo"];
+        var age = [13, 33, 23, 32, 32, 11, 32, 64, 33, 43];
+        var g = [{name: "thoi", AGE: 23}, {name: "Sim", AGE: 44}];
+        var m = [true, false];
+
+        var l = ["tân", 22, false, {name: "tân", AGE: 22}];
+
+        console.log(Combo);
+        console.log(age);
+        console.log(g);
+        console.log(m);
+        console.log(l);
+
+        var arr = [];
+        arr[0] = "iphone";
+        arr[1] = "apple";
+        arr[2] = "samsung";
+
+        var arrB = new Array("SAMSUNG", "APPLE", "IPHONE", "ipad", "ruber", "youtube");
+
+        console.log(arr);
+        console.log(arrB);
+
+        arr[1] = "ACer";
+
+        // document.write("<div>" +arr[0]+ "</div>");
+        // document.write("<div>" +arr[1]+ "</div>");
+        // document.write("<div>" +arr[2]+ "</div>");
+        // document.write("<div>" +arrB[0]+ "</div>");
+        // document.write("<div>" +arrB[1]+ "</div>");
+        // document.write("<div>" +arrB[2]+ "</div>");
+
+        document.write("<ul>")
+        for(var i = 0; i < arrB.length; i++){
+            document.write(`<li style="list-style-type: none;">${i}. ${arrB[i]}</li>`);
+        }
+        document.write("</ul>")
+    </script>
+</body>
+</html>
